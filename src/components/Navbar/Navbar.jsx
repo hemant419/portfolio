@@ -1,8 +1,9 @@
 import React from "react";
-import Toggle from "../Toggle/Toggle";
+import Toggle from "../Toggle/Toggle.jsx";
 import "./Navbar.css";
 import { Link } from "react-scroll";
-const navbar = () => {
+
+const Navbar = () => {
   return (
     <div className="n-wrapper" id="Navbar">
       {/* left */}
@@ -42,11 +43,11 @@ const navbar = () => {
           </ul>
         </div>
         <Link to="contact" spy={true} smooth={true}>
-        <button className="button n-button">Contact</button>
+          <button className="button n-button">Contact</button>
         </Link>
       </div>
     </div>
   );
 };
 
-export default navbar;
+export default Navbar;

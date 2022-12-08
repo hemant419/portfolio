@@ -6,8 +6,7 @@ import boy from "../../img/boy.png";
 import glassesimoji from "../../img/glassesimoji.png";
 import thumbup from "../../img/thumbup.png";
 import crown from "../../img/crown.png";
-import FloatinDiv from "../FloatingDiv/FloatingDiv";
-import Github from "../../img/github.png";
+import FloatinDiv from "../FloatingDiv/FloatingDiv.jsx";
 import LinkedIn from "../../img/linkedin.png";
 import Instagram from "../../img/instagram.png";
 import { themeContext } from "../../Context";
@@ -44,14 +43,14 @@ const Intro = () => {
           <a
             href="https://www.linkedin.com/in/hemant-rajput-261a79219"
             style={{ textDecoration: "none" }}
-            target="_blank"
+            target="_blank" rel="noreferrer"
           >
             <img src={LinkedIn} alt="LinkedIn" />
           </a>
           <a
             href="https://www.instagram.com/hemant_419/?igshid=MDM4ZDc5MmU%3D"
             style={{ textDecoration: "none" }}
-            target="_blank"
+            target="_blank" rel="noreferrer"
           >
             <img src={Instagram} alt="Instagram" />
           </a>
