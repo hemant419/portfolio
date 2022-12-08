@@ -1,5 +1,4 @@
 import React from "react";
-import Toggle from "../Toggle/Toggle.jsx";
 import "./Navbar.css";
 import { Link } from "react-scroll";
 
@@ -9,7 +8,6 @@ const Navbar = () => {
       {/* left */}
       <div className="n-left">
         <div className="n-name">Hemant 😎</div>
-        <Toggle />
       </div>
       {/* right */}
       <div className="n-right">

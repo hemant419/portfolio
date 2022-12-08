@@ -1,12 +1,9 @@
 import React, { useContext, useRef } from "react";
 import "./Contact.css";
 import emailjs from "@emailjs/browser";
-import { themeContext } from "../../Context";
-
+import Swal from "sweetalert2";
 
 const Contact = () => {
-  const theme = useContext(themeContext);
-  const darkMode = theme.state.darkMode;
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -20,14 +17,25 @@ const Contact = () => {
         "9Et2S19fjj9Ka2C5A"
       )
       .then(
-        (result) => {
-          window.alert("Thanks for Contacting me!!😊😊")
+        () => {
+          Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Thanks for Contacting me!!🥳🥳",
+            showConfirmButton: false,
+            timer: 2000,
+          });
           document.getElementById("text").value = "";
           document.getElementById("email").value = "";
           document.getElementById("message").value = "";
         },
         (error) => {
-          console.log(error);
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Something went wrong!!😒😒",
+            footer: error,
+          });
         }
       );
   };
@@ -38,7 +46,7 @@ const Contact = () => {
       <div className="w-left">
         <div className="awesome">
           {/* darkMode */}
-          <span style={{ color: darkMode ? "white" : "" }}>Get in Touch</span>
+          <span>Get in Touch</span>
           <span>Contact me</span>
           <div
             className="blur s-blur1"
@@ -65,14 +73,19 @@ const Contact = () => {
             id="email"
             required
           />
-          <textarea name="message" className="user" placeholder="Message" id="message" required />
+          <textarea
+            name="message"
+            className="user"
+            placeholder="Message"
+            id="message"
+            required
+          />
           <input type="submit" value="Send" className="button" />
           <div
             className="blur c-blur1"
             style={{ background: "var(--purple)" }}
           ></div>
         </form>
-        
       </div>
     </div>
   );

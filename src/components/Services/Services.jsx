@@ -1,18 +1,13 @@
-import React, { useContext } from "react";
+import React from "react";
 import "./Services.css";
 import Card from "../Card/Card.jsx";
 import HeartEmoji from "../../img/heartemoji.png";
 import Glasses from "../../img/glasses.png";
 import Humble from "../../img/humble.png";
-import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
 import Resume from "./resume.pdf";
 
 const Services = () => {
-  // context
-  const theme = useContext(themeContext);
-  const darkMode = theme.state.darkMode;
-
   // transition
   const transition = {
     duration: 1,
@@ -24,15 +19,15 @@ const Services = () => {
       {/* left side */}
       <div className="awesome">
         {/* dark mode */}
-        <span style={{ color: darkMode ? "white" : "" }}>My Awesome</span>
+        <span >My Awesome</span>
         <span>services</span>
-        <spane>
+        <span>
         Writing well designed, testable, efficient code by using best software development practices.
           <br />
           Creating website layout/user interfaces by using standard HTML/CSS practices.
           <br />
           CIntegrating data from various back-end services and databases.
-        </spane>
+        </span>
         <a href={Resume} download>
           <button className="button s-button">Download CV</button>
         </a>

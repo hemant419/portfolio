@@ -1,18 +1,14 @@
-import React, { useContext } from "react";
+import React from "react";
 import "./Works.css";
 import Upwork from "../../img/Upwork.png";
 import Fiverr from "../../img/fiverr.png";
 import Amazon from "../../img/amazon.png";
 import Shopify from "../../img/Shopify.png";
 import Facebook from "../../img/Facebook.png";
-import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
-import {Link} from "react-scroll"
-const Works = () => {
-  // context
-  const theme = useContext(themeContext);
-  const darkMode = theme.state.darkMode;
+import { Link } from "react-scroll";
 
+const Works = () => {
   // transition
   return (
     <div className="works" id="works">
@@ -20,22 +16,22 @@ const Works = () => {
       <div className="w-left">
         <div className="awesome">
           {/* dark Mode */}
-          <span style={{ color: darkMode ? "white" : "" }}>
-            Works for All these
-          </span>
+          <span>Works for All these</span>
           <span>Brands & Clients</span>
-          <spane>
+          <span>
             <br />
-            Create website layout/user interface by using standard HTML/CSS practices.
+            Create website layout/user interface by using standard HTML/CSS
+            practices.
             <br />
             Integrate data from various back-end services and databases.
             <br />
-            Gather and refine specifications and requirements based on technical needs.
+            Gather and refine specifications and requirements based on technical
+            needs.
             <br />
             Create and maintain software documentation.
             <br />
             Be responsible for maintaining, expanding, and scaling our site.
-          </spane>
+          </span>
           <Link to="contact" smooth={true} spy={true}>
             <button className="button s-button">Hire Me</button>
           </Link>
